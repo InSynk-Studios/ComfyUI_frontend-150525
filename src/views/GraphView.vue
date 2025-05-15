@@ -141,11 +141,11 @@ watchEffect(() => {
 })
 
 const useNewMenu = computed(() => {
-  return settingStore.get('Comfy.UseNewMenu')
+  return "Disabled"
 })
 watchEffect(() => {
   if (useNewMenu.value === 'Disabled') {
-    app.ui.menuContainer.style.setProperty('display', 'block')
+    app.ui.menuContainer.style.setProperty('display', 'none')
     app.ui.restoreMenuPosition()
   } else {
     app.ui.menuContainer.style.setProperty('display', 'none')
